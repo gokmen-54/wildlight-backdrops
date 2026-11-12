@@ -7,8 +7,9 @@
     "cat_filter": "backdrop",
     "link": "https://www.etsy.com/listing/4324086389/back-to-school-digital-backdrop-kids?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/4844bc/7007170283/il_794xN.7007170283_mva6.jpg",
-    "price_try": "400,00 TL",
-    "price_usd": "$11.43"
+    "usd": "$11.99",
+    "eur": "€11.15",
+    "gbp": "£9.47"
   },
   {
     "id": 2,
@@ -18,8 +19,9 @@
     "cat_filter": "booktok",
     "link": "https://www.etsy.com/listing/4542040422/the-introvert-society-png-introvert?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/5ff06a/8331439327/il_794xN.8331439327_f4cq.jpg",
-    "price_try": "189,99 TL",
-    "price_usd": "$5.43"
+    "usd": "$5.49",
+    "eur": "€5.11",
+    "gbp": "£4.34"
   },
   {
     "id": 3,
@@ -29,8 +31,9 @@
     "cat_filter": "booktok",
     "link": "https://www.etsy.com/listing/4542011988/booked-and-unbothered-png-book-lover?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/37e8fc/8331235501/il_794xN.8331235501_6iue.jpg",
-    "price_try": "149,99 TL",
-    "price_usd": "$4.29"
+    "usd": "$4.29",
+    "eur": "€3.99",
+    "gbp": "£3.39"
   },
   {
     "id": 4,
@@ -40,8 +43,9 @@
     "cat_filter": "halloween",
     "link": "https://www.etsy.com/listing/4541962709/creepin-it-cozy-png-cozy-halloween-png?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/ef4466/8283096918/il_794xN.8283096918_9pl3.jpg",
-    "price_try": "149,99 TL",
-    "price_usd": "$4.29"
+    "usd": "$4.29",
+    "eur": "€3.99",
+    "gbp": "£3.39"
   },
   {
     "id": 5,
@@ -51,8 +55,9 @@
     "cat_filter": "halloween",
     "link": "https://www.etsy.com/listing/4541818978/in-my-spooky-era-png-halloween-shirt?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/0e0dc8/8281754464/il_794xN.8281754464_u1zb.jpg",
-    "price_try": "149,99 TL",
-    "price_usd": "$4.29"
+    "usd": "$4.29",
+    "eur": "€3.99",
+    "gbp": "£3.39"
   },
   {
     "id": 6,
@@ -62,8 +67,9 @@
     "cat_filter": "halloween",
     "link": "https://www.etsy.com/listing/4541785373/spooky-season-png-halloween-shirt-design?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/f606cc/8281618748/il_794xN.8281618748_jpdh.jpg",
-    "price_try": "149,99 TL",
-    "price_usd": "$4.29"
+    "usd": "$4.29",
+    "eur": "€3.99",
+    "gbp": "£3.39"
   },
   {
     "id": 7,
@@ -73,8 +79,9 @@
     "cat_filter": "teacher",
     "link": "https://www.etsy.com/listing/4541770173/teach-love-inspire-png-teacher-shirt?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/759eab/8281544294/il_794xN.8281544294_f3ie.jpg",
-    "price_try": "149,99 TL",
-    "price_usd": "$4.29"
+    "usd": "$4.29",
+    "eur": "€3.99",
+    "gbp": "£3.39"
   },
   {
     "id": 8,
@@ -84,19 +91,21 @@
     "cat_filter": "teacher",
     "link": "https://www.etsy.com/listing/4541739286/teacher-life-png-retro-teacher-shirt?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/d9a6af/8281142384/il_794xN.8281142384_qn4f.jpg",
-    "price_try": "149,99 TL",
-    "price_usd": "$4.29"
+    "usd": "$4.29",
+    "eur": "€3.99",
+    "gbp": "£3.39"
   },
   {
     "id": 9,
     "title": "İnstagram Birthday Magazine Template: Custom Canva Gift (Digital Download",
-    "subtitle": "Instant High-Resolution Digital Download",
+    "subtitle": "Instant High-Resolution Digital Download for Photoshop, Cricut & Canva",
     "category": "Canva Template",
     "cat_filter": "canva",
     "link": "https://www.etsy.com/listing/4357178987/instagram-birthday-magazine-template?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/659dbe/7135025992/il_794xN.7135025992_hg4i.jpg",
-    "price_try": "350,00 TL",
-    "price_usd": "$10.00"
+    "usd": "$9.99",
+    "eur": "€9.29",
+    "gbp": "£7.89"
   },
   {
     "id": 10,
@@ -106,7 +115,8 @@
     "cat_filter": "canva",
     "link": "https://www.etsy.com/listing/4354895929/birthday-magazine-template-for-best?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/981c2f/7170806581/il_794xN.7170806581_pdz7.jpg",
-    "price_try": "300,00 TL",
-    "price_usd": "$8.57"
+    "usd": "$9.99",
+    "eur": "€9.29",
+    "gbp": "£7.89"
   }
 ]
