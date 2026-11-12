@@ -1,0 +1,54 @@
+[
+  {
+    "id": 101,
+    "title": "Cozy Boho Studio Portrait Backdrop",
+    "subtitle": "Warm golden bokeh and timeless earthy tones tailored for studio newborn, maternity composites and cozy portraits.",
+    "category": "Digital Backdrop",
+    "cat_filter": "backdrop",
+    "link": "https://wildlightbackdrops.etsy.com",
+    "img": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&q=80",
+    "usd": "$11.99",
+    "eur": "€11.15",
+    "gbp": "£9.47",
+    "is_request_first": true
+  },
+  {
+    "id": 102,
+    "title": "Moody Emerald Floral Fine Art Backdrop",
+    "subtitle": "Deep botanical ambiance with dramatic chiaroscuro contrasts. Perfect for high-fashion, dancers, and creative portraiture.",
+    "category": "Digital Backdrop",
+    "cat_filter": "backdrop",
+    "link": "https://wildlightbackdrops.etsy.com",
+    "img": "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=800&q=80",
+    "usd": "$11.99",
+    "eur": "€11.15",
+    "gbp": "£9.47",
+    "is_request_first": true
+  },
+  {
+    "id": 103,
+    "title": "Vintage Christmas & Winter Magic Backdrop",
+    "subtitle": "Rustic holiday fireplace, warm pine wreaths, and soft festive candlelight for seasonal family photography.",
+    "category": "Seasonal & Holiday",
+    "cat_filter": "halloween",
+    "link": "https://wildlightbackdrops.etsy.com",
+    "img": "https://images.unsplash.com/photo-1543258103-a62bdc069871?w=800&q=80",
+    "usd": "$12.99",
+    "eur": "€12.08",
+    "gbp": "£10.26",
+    "is_request_first": true
+  },
+  {
+    "id": 104,
+    "title": "Mega 50+ In 1 All-Access Studio Bundle",
+    "subtitle": "Complete studio asset library: All portrait backdrops, BookTok & Spooky sublimation PNGs, and Canva magazine templates in one pack.",
+    "category": "Mega Bundle",
+    "cat_filter": "backdrop",
+    "link": "https://wildlightbackdrops.etsy.com",
+    "img": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80",
+    "usd": "$29.99",
+    "eur": "€27.89",
+    "gbp": "£23.69",
+    "is_request_first": true
+  }
+]
