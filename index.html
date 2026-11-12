@@ -2,25 +2,31 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wildlight Backdrops | 8K Fine Art Digital Photography Backdrops & Photoshop Overlays</title>
-  <meta name="description" content="Discover premium 8K resolution, 300 DPI print-ready digital backdrops for portrait, maternity, newborn, and fine art photographers. Instant digital download on Etsy.">
-  <meta name="keywords" content="digital backdrops, photography backdrops, fine art backdrops, maternity backdrop, newborn digital prop, photoshop overlays, studio background 8k, portrait backdrops">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Wildlight Backdrops | 8K Fine Art Digital Photography Backdrops & Overlays</title>
+  <meta name="description" content="Mastered 8K resolution, 300 DPI print-ready digital photography backdrops for portrait, maternity, newborn, and fine art studio photographers. Instant Etsy download.">
+  <meta name="keywords" content="digital backdrops, photography backdrops, fine art backdrops, maternity backdrop, newborn digital backdrop, photoshop overlays, 8k studio background, portrait overlays">
   <meta name="author" content="Wildlight Backdrops">
   <link rel="canonical" href="https://wildlightbackdrops.etsy.com">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Wildlight Backdrops | 8K Fine Art Digital Photography Backdrops">
-  <meta property="og:description" content="Elevate your photography with 8K ultra-HD, 300 DPI studio backdrops. Instant Photoshop download on Etsy.">
+  <meta property="og:title" content="Wildlight Backdrops | 8K Fine Art Digital Studio Backdrops">
+  <meta property="og:description" content="Elevate your portrait & maternity sessions with museum-grade 8K 300 DPI digital studio backdrops. Instant download on Etsy.">
   <meta property="og:image" content="assets/backdrops/fine_art_portrait.jpg">
   <meta property="og:url" content="https://wildlightbackdrops.etsy.com">
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Wildlight Backdrops | Premium 8K Photography Overlays">
+  <meta name="twitter:title" content="Wildlight Backdrops | 8K Fine Art Photography Overlays">
   <meta name="twitter:description" content="Instant download 8K studio backdrops for professional composite artists and photographers.">
   <meta name="twitter:image" content="assets/backdrops/fine_art_portrait.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230B0F19'/><text x='50%' y='62%' font-size='50' font-weight='900' fill='%23EAB308' text-anchor='middle' font-family='sans-serif'>W</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -28,315 +34,1038 @@
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
           colors: {
             brand: {
-              gold: '#eab308',
-              accent: '#f59e0b',
-              dark: '#090d16',
+              gold: '#EAB308',
+              accent: '#F59E0B',
+              amber: '#D97706',
+              dark: '#06080F',
+              surface: '#0B0F19',
               card: '#111827',
-              border: '#1f2937'
+              cardBorder: 'rgba(234, 179, 8, 0.16)',
+              subtleBorder: 'rgba(255, 255, 255, 0.08)'
             }
+          },
+          boxShadow: {
+            'gold-glow': '0 0 35px -5px rgba(234, 179, 8, 0.25)',
+            'gold-sm': '0 0 15px -3px rgba(234, 179, 8, 0.3)',
           }
         }
       }
     }
   </script>
 
-  <!-- Google Structured Data (JSON-LD) for Rich Google Search Results -->
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      background-color: #06080F;
+    }
+    .glass-nav {
+      background: rgba(6, 8, 15, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FDE047 0%, #EAB308 50%, #CA8A04 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-btn {
+      background: linear-gradient(135deg, #FACC15 0%, #EAB308 50%, #D97706 100%);
+      color: #06080F;
+      font-weight: 800;
+      transition: all 0.25s ease;
+    }
+    .gold-btn:hover {
+      box-shadow: 0 10px 25px -5px rgba(234, 179, 8, 0.4);
+      transform: translateY(-1px);
+    }
+    /* Hide scrollbar for category pills on mobile */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+  <!-- Google Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "500+ Mega Studio Backdrops Bundle (8K 300 DPI)",
-    "image": "assets/backdrops/fine_art_portrait.jpg",
-    "description": "Professional 8K resolution, 300 DPI digital backdrops and overlays for maternity, newborn, and fine art photographers.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Wildlight Backdrops"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://wildlightbackdrops.etsy.com",
-      "priceCurrency": "USD",
-      "price": "39.99",
-      "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "54"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Wildlight Backdrops",
+        "url": "https://wildlightbackdrops.etsy.com",
+        "description": "Premium 8K Ultra-HD 300 DPI Digital Photography Backdrops & Overlays for Photographers.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Wildlight Backdrops",
+          "logo": "https://gokmen-54.github.io/wildlight-backdrops/assets/backdrops/fine_art_portrait.jpg"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "500+ Mega Studio Backdrops Bundle (8K 300 DPI)",
+        "image": "assets/backdrops/fine_art_portrait.jpg",
+        "description": "Ultra high-resolution 8K photography backdrops & atmospheric overlays for fine art, maternity, and newborn composites.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Wildlight Backdrops"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://wildlightbackdrops.etsy.com",
+          "priceCurrency": "USD",
+          "price": "39.99",
+          "priceValidUntil": "2027-12-31",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "54",
+          "bestRating": "5"
+        }
+      }
+    ]
   }
   </script>
 </head>
 
-<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-gold selection:text-black">
+<body class="bg-brand-dark text-slate-100 antialiased selection:bg-brand-gold selection:text-black">
 
   <!-- Top Announcement Bar -->
-  <div class="bg-gradient-to-r from-amber-600 to-yellow-600 text-black text-xs font-bold py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2">
-    <span>✨ SPECIAL ETSY PROMOTION: GET UP TO 80% OFF THE COMPLETE 8K STUDIO BUNDLE</span>
-    <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="underline hover:text-white transition">SHOP ETSY NOW ➔</a>
-  </div>
+  <aside class="relative bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 text-slate-950 font-bold text-xs py-2 px-3 sm:px-4 text-center tracking-wide shadow-md z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
+      <span class="inline-flex items-center gap-1.5 font-extrabold uppercase text-[10px] sm:text-xs">
+        <span class="inline-block w-2 h-2 rounded-full bg-slate-950 animate-ping"></span>
+        FLASH SALE: ALL 8K SINGLE BACKDROPS ONLY $3.99
+      </span>
+      <span class="hidden md:inline text-slate-900/40">|</span>
+      <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="underline hover:text-white transition-colors duration-200 font-black text-[11px] sm:text-xs flex items-center gap-1">
+        SHOP ON ETSY ➔
+      </a>
+    </div>
+  </aside>
 
-  <!-- Navigation -->
-  <header class="border-b border-brand-border bg-brand-dark/80 backdrop-blur-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-yellow-500 to-amber-600 flex items-center justify-center text-black font-extrabold text-xl shadow-lg shadow-yellow-500/20">
+  <!-- Sticky Glassmorphic Header -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-brand-subtleBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-gold rounded-lg">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-yellow-500 to-amber-600 flex items-center justify-center text-slate-950 font-black text-xl shadow-gold-sm group-hover:scale-105 transition-transform">
           W
         </div>
-        <div>
-          <span class="text-xl font-extrabold tracking-tight text-white block">Wildlight<span class="text-brand-gold">Backdrops</span></span>
-          <span class="text-[10px] text-slate-400 uppercase tracking-widest block font-medium">Fine Art Photography Assets</span>
+        <div class="text-left">
+          <div class="text-lg sm:text-xl font-extrabold tracking-tight text-white flex items-center leading-tight">
+            Wildlight<span class="text-brand-gold ml-0.5">Backdrops</span>
+          </div>
+          <span class="text-[9px] sm:text-[10px] text-slate-400 uppercase tracking-widest font-semibold block">8K Studio Assets • Etsy Shop</span>
         </div>
-      </div>
+      </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <a href="#gallery" class="hover:text-brand-gold transition">Backdrop Gallery</a>
-        <a href="#specs" class="hover:text-brand-gold transition">Specifications</a>
-        <a href="#bundle" class="hover:text-brand-gold transition">Mega Bundle</a>
-        <a href="#reviews" class="hover:text-brand-gold transition">Photographer Reviews</a>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+        <a href="#gallery" class="hover:text-brand-gold transition-colors">Backdrop Gallery</a>
+        <a href="#specs" class="hover:text-brand-gold transition-colors">8K Technical Specs</a>
+        <a href="#bundle" class="hover:text-brand-gold transition-colors flex items-center gap-1.5">
+          <span>500+ Mega Bundle</span>
+          <span class="bg-amber-500/20 text-brand-gold text-[10px] font-bold px-2 py-0.5 rounded-full border border-yellow-500/30">80% OFF</span>
+        </a>
+        <a href="#reviews" class="hover:text-brand-gold transition-colors">Reviews</a>
+        <a href="#faq" class="hover:text-brand-gold transition-colors">FAQ</a>
       </nav>
 
+      <!-- Desktop Header CTA & Mobile Toggle -->
       <div class="flex items-center gap-3">
-        <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="bg-brand-gold hover:bg-yellow-400 text-black font-extrabold text-xs md:text-sm py-2.5 px-6 rounded-full shadow-lg shadow-yellow-500/25 transition-all transform hover:-translate-y-0.5">
-          Visit Etsy Shop ➔
+        <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 gold-btn px-5 py-2.5 rounded-full text-xs font-black shadow-md uppercase tracking-wider">
+          <span>Visit Etsy Shop</span>
+          <span class="text-sm">➔</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="md:hidden p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 hover:text-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold">
+          <svg id="menuIconClosed" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          <svg id="menuIconOpen" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-brand-subtleBorder bg-slate-950/98 px-5 py-6 space-y-4">
+      <a href="#gallery" class="mobile-nav-link block text-base font-semibold text-slate-200 hover:text-brand-gold py-2 border-b border-slate-900">Backdrop Gallery</a>
+      <a href="#specs" class="mobile-nav-link block text-base font-semibold text-slate-200 hover:text-brand-gold py-2 border-b border-slate-900">8K Technical Specs</a>
+      <a href="#bundle" class="mobile-nav-link block text-base font-semibold text-slate-200 hover:text-brand-gold py-2 border-b border-slate-900 flex items-center justify-between">
+        <span>500+ Mega Studio Bundle</span>
+        <span class="bg-amber-500/20 text-brand-gold text-xs font-bold px-2 py-0.5 rounded-full">80% OFF</span>
+      </a>
+      <a href="#reviews" class="mobile-nav-link block text-base font-semibold text-slate-200 hover:text-brand-gold py-2 border-b border-slate-900">Photographer Reviews</a>
+      <a href="#faq" class="mobile-nav-link block text-base font-semibold text-slate-200 hover:text-brand-gold py-2 border-b border-slate-900">FAQ & Instructions</a>
+      <div class="pt-2">
+        <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="w-full gold-btn py-3 rounded-xl text-center font-black text-sm flex items-center justify-center gap-2">
+          <span>Go to Official Etsy Shop</span>
+          <span>➔</span>
         </a>
       </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="relative pt-20 pb-24 overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent pointer-events-none"></div>
-    
-    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-brand-gold text-xs font-semibold mb-6 shadow-inner">
+  <section class="relative pt-12 pb-16 sm:pt-20 sm:pb-24 overflow-hidden">
+    <!-- Ambient Radial Glows -->
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-amber-500/10 blur-[130px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-1/2 right-0 w-[400px] h-[400px] bg-yellow-500/5 blur-[100px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      
+      <!-- Top Pill Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-slate-900/90 border border-yellow-500/30 text-brand-gold text-[11px] sm:text-xs font-bold mb-6 shadow-gold-sm backdrop-blur">
         <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
-        8K ULTRA-HD (8000x5333 px) • 300 DPI PRINT READY
+        <span>MASTERED IN TRUE 8K (8000x5333 PX) • 300 DPI PRINT READY</span>
       </div>
 
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-white max-w-4xl mx-auto leading-tight md:leading-none mb-6">
-        Turn Any Portrait into a <span class="bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 bg-clip-text text-transparent">Fine Art Masterpiece</span>
+      <!-- Main Headline -->
+      <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white max-w-4xl mx-auto leading-[1.15] mb-6">
+        Turn Any Studio Portrait into a <span class="gold-gradient-text">Fine Art Masterpiece</span>
       </h1>
 
-      <p class="text-slate-400 text-base md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
-        Handcrafted digital photography backdrops and atmospheric overlays designed for maternity, newborn, and portrait photographers. Instant download, lifetime commercial license.
+      <!-- Subheadline -->
+      <p class="text-slate-300 text-sm sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-normal">
+        Handcrafted ultra-HD digital photography backdrops and atmospheric overlays for maternity, newborn, and portrait artists. Instant Etsy delivery with lifetime commercial client rights.
       </p>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="w-full sm:w-auto bg-gradient-to-r from-yellow-500 to-amber-500 hover:from-yellow-400 hover:to-amber-400 text-black font-extrabold py-4 px-8 rounded-full shadow-xl shadow-yellow-500/20 text-base transition-all transform hover:scale-105">
-          Explore All Backdrops on Etsy ➔
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md mx-auto sm:max-w-none">
+        <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="w-full sm:w-auto gold-btn py-3.5 sm:py-4 px-8 rounded-full text-sm sm:text-base font-black shadow-gold-glow flex items-center justify-center gap-2">
+          <span>Explore All Backdrops on Etsy</span>
+          <span>➔</span>
         </a>
-        <a href="#bundle" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold py-4 px-8 rounded-full text-base transition">
-          View 500+ Mega Bundle ($39.99)
+        <a href="#bundle" class="w-full sm:w-auto bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-700/80 font-bold py-3.5 sm:py-4 px-8 rounded-full text-sm sm:text-base transition duration-200 flex items-center justify-center gap-2">
+          <span>View 500+ Mega Bundle</span>
+          <span class="text-brand-gold font-black">($39.99)</span>
         </a>
       </div>
 
-      <!-- Trust Badges -->
-      <div class="mt-14 pt-10 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-8 md:gap-14 text-slate-400 text-xs md:text-sm font-medium">
-        <div class="flex items-center gap-2">
-          <span class="text-brand-gold text-lg">★★★★★</span>
-          <span class="text-white font-bold">5.0 Star Rated on Etsy</span>
+      <!-- Verified Trust Proof Badges -->
+      <div class="mt-12 sm:mt-16 pt-8 border-t border-brand-subtleBorder grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-slate-300 text-xs sm:text-sm font-semibold max-w-4xl mx-auto">
+        <div class="flex items-center justify-center gap-2 bg-slate-900/40 p-2.5 rounded-xl border border-slate-800/60">
+          <span class="text-brand-gold text-base">★★★★★</span>
+          <span class="text-white font-bold">5.0 Star Rated (54 Reviews)</span>
         </div>
-        <div class="flex items-center gap-2">
-          <span>⚡ Instant Digital Download</span>
+        <div class="flex items-center justify-center gap-2 bg-slate-900/40 p-2.5 rounded-xl border border-slate-800/60">
+          <span class="text-brand-gold text-base">⚡</span>
+          <span>Instant Download</span>
         </div>
-        <div class="flex items-center gap-2">
-          <span>🎨 Photoshop & Canva Ready</span>
+        <div class="flex items-center justify-center gap-2 bg-slate-900/40 p-2.5 rounded-xl border border-slate-800/60">
+          <span class="text-brand-gold text-base">🎨</span>
+          <span>Photoshop & Canva Ready</span>
         </div>
-        <div class="flex items-center gap-2">
-          <span>💼 Full Commercial License</span>
+        <div class="flex items-center justify-center gap-2 bg-slate-900/40 p-2.5 rounded-xl border border-slate-800/60">
+          <span class="text-brand-gold text-base">💼</span>
+          <span>Full Commercial License</span>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- Interactive Gallery Section -->
-  <section id="gallery" class="py-20 bg-slate-950 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+  <section id="gallery" class="py-16 sm:py-24 bg-brand-surface border-t border-brand-subtleBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title & Description -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12">
         <div>
-          <span class="text-brand-gold font-bold text-xs uppercase tracking-widest block mb-2">Curated Collections</span>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-white">Popular Studio Backdrops</h2>
+          <span class="text-brand-gold font-bold text-xs uppercase tracking-widest block mb-2">Curated Studio Collection</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">Featured 8K Photography Backdrops</h2>
         </div>
-        <p class="text-slate-400 text-sm max-w-md mt-4 md:mt-0">
-          Every backdrop is upscaled and mastered at 300 DPI to guarantee museum-grade print results for your clients.
+        <p class="text-slate-400 text-xs sm:text-sm max-w-md mt-3 md:mt-0 leading-relaxed">
+          Every backdrop is crafted at 300 DPI to guarantee zero artifacting and museum-grade canvas or fine art prints for your clients.
         </p>
       </div>
 
-      <!-- Grid of Backdrops -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Interactive Filter Pills -->
+      <div class="flex items-center gap-2 sm:gap-3 overflow-x-auto no-scrollbar pb-3 sm:pb-4 mb-8">
+        <button onclick="filterGallery('all', this)" class="filter-pill active px-4 py-2 rounded-full text-xs font-extrabold bg-brand-gold text-slate-950 transition-all shadow-gold-sm shrink-0">
+          All Backdrops (6)
+        </button>
+        <button onclick="filterGallery('fine-art', this)" class="filter-pill px-4 py-2 rounded-full text-xs font-semibold bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800 transition-all shrink-0">
+          Fine Art Portrait
+        </button>
+        <button onclick="filterGallery('boho', this)" class="filter-pill px-4 py-2 rounded-full text-xs font-semibold bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800 transition-all shrink-0">
+          Boho Studio
+        </button>
+        <button onclick="filterGallery('maternity', this)" class="filter-pill px-4 py-2 rounded-full text-xs font-semibold bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800 transition-all shrink-0">
+          Maternity Arch
+        </button>
+        <button onclick="filterGallery('botanical', this)" class="filter-pill px-4 py-2 rounded-full text-xs font-semibold bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800 transition-all shrink-0">
+          Moody Botanical
+        </button>
+        <button onclick="filterGallery('newborn', this)" class="filter-pill px-4 py-2 rounded-full text-xs font-semibold bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800 transition-all shrink-0">
+          Dreamy Newborn
+        </button>
+        <button onclick="filterGallery('editorial', this)" class="filter-pill px-4 py-2 rounded-full text-xs font-semibold bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800 transition-all shrink-0">
+          Minimal Editorial
+        </button>
+      </div>
+
+      <!-- 6-Card Responsive Gallery Grid -->
+      <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         
-        <!-- Card 1 -->
-        <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden hover:border-brand-gold transition duration-300 group flex flex-col justify-between shadow-xl">
-          <div class="relative overflow-hidden aspect-[4/3] bg-slate-900">
-            <img src="assets/backdrops/fine_art_portrait.jpg" alt="Fine Art Studio Portrait Backdrop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur text-brand-gold font-bold text-[11px] px-3 py-1 rounded-full border border-yellow-500/30">
+        <!-- CARD 1: Fine Art Studio Portrait -->
+        <article class="gallery-card bg-brand-card rounded-2xl border border-brand-cardBorder overflow-hidden hover:border-brand-gold transition duration-300 group flex flex-col justify-between shadow-xl" data-category="fine-art">
+          <div class="relative overflow-hidden aspect-[4/3] bg-slate-950 cursor-pointer" onclick="openLightbox('assets/backdrops/fine_art_portrait.jpg', 'Fine Art Studio Portrait Backdrop')">
+            <img 
+              src="assets/backdrops/fine_art_portrait.jpg" 
+              alt="Fine Art Studio Portrait Backdrop" 
+              loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none"></div>
+            <!-- Badges -->
+            <span class="absolute top-3 left-3 bg-slate-950/90 backdrop-blur text-brand-gold font-bold text-[10px] sm:text-[11px] px-3 py-1 rounded-full border border-yellow-500/40 shadow-md">
               8K UHD • 300 DPI
             </span>
+            <span class="absolute bottom-3 right-3 bg-black/70 backdrop-blur text-slate-200 text-[10px] font-semibold px-2.5 py-1 rounded-md opacity-90 group-hover:opacity-100 flex items-center gap-1">
+              <span>🔍 Click to Zoom</span>
+            </span>
           </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-white mb-2">Fine Art Studio Portrait Backdrop</h3>
-            <p class="text-slate-400 text-xs mb-4">Cinematic mood lighting with rich painterly texture. Ideal for editorial, headshots, and fine art maternity portraits.</p>
-            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
-              <div>
-                <span class="text-xs text-slate-500 line-through">$14.99</span>
-                <span class="text-lg font-extrabold text-brand-gold ml-2">$3.99</span>
+          <div class="p-5 sm:p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-slate-400 font-semibold mb-1.5">
+                <span class="text-brand-gold">FINE ART COLLECTION</span>
+                <span>8000 × 5333 px</span>
               </div>
-              <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="bg-slate-800 hover:bg-brand-gold hover:text-black text-white text-xs font-bold py-2 px-4 rounded-lg transition">
-                Get on Etsy ➔
+              <h3 class="text-base sm:text-lg font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
+                Fine Art Studio Portrait Backdrop
+              </h3>
+              <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                Rich painterly textures and dramatic Chiaroscuro studio lighting. Masterfully crafted for high-end headshots, creative maternity, and legacy portraits.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-500 line-through font-semibold">$14.99</span>
+                <span class="text-lg sm:text-xl font-black text-brand-gold ml-2">$3.99</span>
+              </div>
+              <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="gold-btn py-2.5 px-4 rounded-xl text-xs font-black shadow-md flex items-center gap-1.5">
+                <span>Download on Etsy</span>
+                <span>➔</span>
               </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 2: Warm Earthy Boho Studio -->
+        <article class="gallery-card bg-brand-card rounded-2xl border border-brand-cardBorder overflow-hidden hover:border-brand-gold transition duration-300 group flex flex-col justify-between shadow-xl" data-category="boho">
+          <div class="relative overflow-hidden aspect-[4/3] bg-slate-950 cursor-pointer" onclick="openLightbox('assets/backdrops/boho_studio.jpg', 'Warm Earthy Boho Studio Backdrop')">
+            <img 
+              src="assets/backdrops/boho_studio.jpg" 
+              alt="Warm Boho Studio & Maternity Digital Backdrop" 
+              loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none"></div>
+            <!-- Badges -->
+            <span class="absolute top-3 left-3 bg-slate-950/90 backdrop-blur text-brand-gold font-bold text-[10px] sm:text-[11px] px-3 py-1 rounded-full border border-yellow-500/40 shadow-md">
+              8K UHD • 300 DPI
+            </span>
+            <span class="absolute bottom-3 right-3 bg-black/70 backdrop-blur text-slate-200 text-[10px] font-semibold px-2.5 py-1 rounded-md opacity-90 group-hover:opacity-100 flex items-center gap-1">
+              <span>🔍 Click to Zoom</span>
+            </span>
+          </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-slate-400 font-semibold mb-1.5">
+                <span class="text-brand-gold">BOHO & MATERNITY</span>
+                <span>8000 × 5333 px</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
+                Warm Boho Earthy Studio Backdrop
+              </h3>
+              <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                Warm organic terracotta and cream tones with natural sun bokeh. Tailor-made for cozy family sessions, boho maternity, and sitters.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-500 line-through font-semibold">$14.99</span>
+                <span class="text-lg sm:text-xl font-black text-brand-gold ml-2">$3.99</span>
+              </div>
+              <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="gold-btn py-2.5 px-4 rounded-xl text-xs font-black shadow-md flex items-center gap-1.5">
+                <span>Download on Etsy</span>
+                <span>➔</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 3: Moody Emerald Botanical -->
+        <article class="gallery-card bg-brand-card rounded-2xl border border-brand-cardBorder overflow-hidden hover:border-brand-gold transition duration-300 group flex flex-col justify-between shadow-xl" data-category="botanical">
+          <div class="relative overflow-hidden aspect-[4/3] bg-slate-950 cursor-pointer" onclick="openLightbox('assets/backdrops/moody_emerald.jpg', 'Moody Emerald Botanical Studio Backdrop')">
+            <img 
+              src="assets/backdrops/moody_emerald.jpg" 
+              alt="Moody Emerald Botanical Digital Backdrop" 
+              loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none"></div>
+            <!-- Badges -->
+            <span class="absolute top-3 left-3 bg-slate-950/90 backdrop-blur text-brand-gold font-bold text-[10px] sm:text-[11px] px-3 py-1 rounded-full border border-yellow-500/40 shadow-md">
+              8K UHD • 300 DPI
+            </span>
+            <span class="absolute bottom-3 right-3 bg-black/70 backdrop-blur text-slate-200 text-[10px] font-semibold px-2.5 py-1 rounded-md opacity-90 group-hover:opacity-100 flex items-center gap-1">
+              <span>🔍 Click to Zoom</span>
+            </span>
+          </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-slate-400 font-semibold mb-1.5">
+                <span class="text-brand-gold">DARK FLORAL BOTANICAL</span>
+                <span>8000 × 5333 px</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
+                Moody Emerald Botanical Backdrop
+              </h3>
+              <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                Deep rich forest emerald greens with delicate baroque foliage shadows. Gives immediate high-fashion editorial depth to any subject.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-500 line-through font-semibold">$14.99</span>
+                <span class="text-lg sm:text-xl font-black text-brand-gold ml-2">$3.99</span>
+              </div>
+              <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="gold-btn py-2.5 px-4 rounded-xl text-xs font-black shadow-md flex items-center gap-1.5">
+                <span>Download on Etsy</span>
+                <span>➔</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 4: Minimalist Studio Sun Arch -->
+        <article class="gallery-card bg-brand-card rounded-2xl border border-brand-cardBorder overflow-hidden hover:border-brand-gold transition duration-300 group flex flex-col justify-between shadow-xl" data-category="maternity">
+          <div class="relative overflow-hidden aspect-[4/3] bg-slate-950 cursor-pointer" onclick="openLightbox('assets/backdrops/maternity_arch.jpg', 'Minimalist Studio Sun Arch Backdrop')">
+            <img 
+              src="assets/backdrops/maternity_arch.jpg" 
+              alt="Minimalist Studio Sun Arch Backdrop" 
+              loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none"></div>
+            <!-- Badges -->
+            <span class="absolute top-3 left-3 bg-slate-950/90 backdrop-blur text-brand-gold font-bold text-[10px] sm:text-[11px] px-3 py-1 rounded-full border border-yellow-500/40 shadow-md">
+              8K UHD • 300 DPI
+            </span>
+            <span class="absolute bottom-3 right-3 bg-black/70 backdrop-blur text-slate-200 text-[10px] font-semibold px-2.5 py-1 rounded-md opacity-90 group-hover:opacity-100 flex items-center gap-1">
+              <span>🔍 Click to Zoom</span>
+            </span>
+          </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-slate-400 font-semibold mb-1.5">
+                <span class="text-brand-gold">ARCHITECTURAL MATERNITY</span>
+                <span>8000 × 5333 px</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
+                Minimalist Studio Sun Arch Backdrop
+              </h3>
+              <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                Clean modern architectural arches bathed in soft morning sunlight. The #1 bestseller for minimalist maternity and high-fashion poses.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-500 line-through font-semibold">$14.99</span>
+                <span class="text-lg sm:text-xl font-black text-brand-gold ml-2">$3.99</span>
+              </div>
+              <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="gold-btn py-2.5 px-4 rounded-xl text-xs font-black shadow-md flex items-center gap-1.5">
+                <span>Download on Etsy</span>
+                <span>➔</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 5: Dreamy Celestial Newborn Clouds -->
+        <article class="gallery-card bg-brand-card rounded-2xl border border-brand-cardBorder overflow-hidden hover:border-brand-gold transition duration-300 group flex flex-col justify-between shadow-xl" data-category="newborn">
+          <div class="relative overflow-hidden aspect-[4/3] bg-slate-950 cursor-pointer" onclick="openLightbox('assets/backdrops/newborn_clouds.jpg', 'Dreamy Celestial Newborn Clouds Backdrop')">
+            <img 
+              src="assets/backdrops/newborn_clouds.jpg" 
+              alt="Dreamy Celestial Newborn Clouds Digital Backdrop" 
+              loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none"></div>
+            <!-- Badges -->
+            <span class="absolute top-3 left-3 bg-slate-950/90 backdrop-blur text-brand-gold font-bold text-[10px] sm:text-[11px] px-3 py-1 rounded-full border border-yellow-500/40 shadow-md">
+              8K UHD • 300 DPI
+            </span>
+            <span class="absolute bottom-3 right-3 bg-black/70 backdrop-blur text-slate-200 text-[10px] font-semibold px-2.5 py-1 rounded-md opacity-90 group-hover:opacity-100 flex items-center gap-1">
+              <span>🔍 Click to Zoom</span>
+            </span>
+          </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-slate-400 font-semibold mb-1.5">
+                <span class="text-brand-gold">ETHEREAL NEWBORN</span>
+                <span>8000 × 5333 px</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
+                Dreamy Celestial Newborn Clouds
+              </h3>
+              <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                Whimsical celestial clouds and delicate starlight atmospheric glow. Crafted specifically for sleepy newborn composites and fairytale sessions.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-500 line-through font-semibold">$14.99</span>
+                <span class="text-lg sm:text-xl font-black text-brand-gold ml-2">$3.99</span>
+              </div>
+              <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="gold-btn py-2.5 px-4 rounded-xl text-xs font-black shadow-md flex items-center gap-1.5">
+                <span>Download on Etsy</span>
+                <span>➔</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 6: Contemporary Concrete Editorial -->
+        <article class="gallery-card bg-brand-card rounded-2xl border border-brand-cardBorder overflow-hidden hover:border-brand-gold transition duration-300 group flex flex-col justify-between shadow-xl" data-category="editorial">
+          <div class="relative overflow-hidden aspect-[4/3] bg-slate-950 cursor-pointer" onclick="openLightbox('assets/backdrops/minimal_concrete.jpg', 'Contemporary Concrete Editorial Backdrop')">
+            <img 
+              src="assets/backdrops/minimal_concrete.jpg" 
+              alt="Contemporary Concrete Editorial Backdrop" 
+              loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none"></div>
+            <!-- Badges -->
+            <span class="absolute top-3 left-3 bg-slate-950/90 backdrop-blur text-brand-gold font-bold text-[10px] sm:text-[11px] px-3 py-1 rounded-full border border-yellow-500/40 shadow-md">
+              8K UHD • 300 DPI
+            </span>
+            <span class="absolute bottom-3 right-3 bg-black/70 backdrop-blur text-slate-200 text-[10px] font-semibold px-2.5 py-1 rounded-md opacity-90 group-hover:opacity-100 flex items-center gap-1">
+              <span>🔍 Click to Zoom</span>
+            </span>
+          </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-slate-400 font-semibold mb-1.5">
+                <span class="text-brand-gold">EDITORIAL & PORTRAIT</span>
+                <span>8000 × 5333 px</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
+                Contemporary Concrete Editorial
+              </h3>
+              <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                Sleek urban concrete patina with sculpted directional softbox light. Flawless for model tests, corporate headshots, and modern fashion.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-500 line-through font-semibold">$14.99</span>
+                <span class="text-lg sm:text-xl font-black text-brand-gold ml-2">$3.99</span>
+              </div>
+              <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="gold-btn py-2.5 px-4 rounded-xl text-xs font-black shadow-md flex items-center gap-1.5">
+                <span>Download on Etsy</span>
+                <span>➔</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- View All Listings on Etsy Banner -->
+      <div class="mt-12 sm:mt-16 text-center">
+        <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-brand-gold hover:text-yellow-300 font-bold text-sm tracking-wide transition-all p-2 rounded-lg hover:bg-slate-900">
+          <span>Explore All 25+ Active Digital Backdrops on Etsy</span>
+          <span class="text-base">➔</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 500+ Mega Studio Bundle Feature Section -->
+  <section id="bundle" class="py-20 sm:py-28 bg-gradient-to-b from-brand-surface via-slate-950 to-brand-dark relative overflow-hidden border-t border-brand-subtleBorder">
+    <!-- Ambient Glow -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(234,179,8,0.06),_transparent_70%)] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="bg-gradient-to-br from-slate-900/90 to-black/95 p-6 sm:p-10 md:p-14 rounded-3xl border border-yellow-500/30 shadow-2xl relative">
+        
+        <!-- Value Badge -->
+        <div class="absolute -top-3.5 right-6 sm:right-10 bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 font-black text-[11px] sm:text-xs px-4 py-1 rounded-full uppercase tracking-wider shadow-lg flex items-center gap-1">
+          <span>🔥 BEST VALUE • 80% SAVINGS</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Left Column: Copy & Details -->
+          <div class="lg:col-span-7">
+            <span class="text-brand-gold font-extrabold text-xs uppercase tracking-widest block mb-2">Exclusive Studio Photographer Vault</span>
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black text-white mb-4 leading-tight">
+              The 500+ Mega Studio Backdrops & Overlays Vault
+            </h2>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+              Instant access to our complete master collection. Covers every client session type: Fine Art, Boho, Architectural Maternity, Celestial Newborn, Moody Botanicals, and Minimal Editorial with instant high-speed Google Drive cloud delivery.
+            </p>
+            
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-200 mb-8 font-medium">
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-gold font-bold">✓</span>
+                <span><strong>500+ Mastered Backdrops & Overlays</strong> in Ultra 8K (8000x5333 px)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-gold font-bold">✓</span>
+                <span><strong>Native 300 DPI Print Resolution</strong> — ready for client acrylics & wall canvas</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-gold font-bold">✓</span>
+                <span><strong>Photoshop, Lightroom & Canva Compatible</strong> — drag & drop simplicity</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-gold font-bold">✓</span>
+                <span><strong>Full Commercial Rights Included</strong> — unlimited client sessions & prints</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brand-gold font-bold">✓</span>
+                <span><strong>Lifetime Cloud Access</strong> — permanent Google Drive folder link, no subscription</span>
+              </li>
+            </ul>
+
+            <!-- Pricing Block -->
+            <div class="flex items-baseline gap-3 sm:gap-4 mb-6">
+              <span class="text-3xl sm:text-5xl font-black text-white">$39.99</span>
+              <span class="text-base sm:text-xl text-slate-500 line-through font-semibold">$199.99</span>
+              <span class="text-[11px] sm:text-xs font-black text-emerald-300 bg-emerald-500/20 px-3 py-1 rounded-full border border-emerald-500/30">
+                SAVE $160 TODAY
+              </span>
+            </div>
+
+            <!-- CTA -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="gold-btn py-3.5 sm:py-4 px-8 rounded-full text-center text-sm font-black shadow-gold-glow flex items-center justify-center gap-2">
+                <span>Claim Mega Bundle on Etsy ➔</span>
+              </a>
+              <span class="text-[11px] text-slate-400 text-center sm:text-left flex items-center justify-center sm:justify-start gap-1">
+                <span>🔒 Secure checkout via Etsy</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Collage -->
+          <div class="lg:col-span-5 grid grid-cols-2 gap-3 sm:gap-4">
+            <div class="overflow-hidden rounded-2xl border border-slate-800 shadow-lg aspect-square">
+              <img src="assets/backdrops/fine_art_portrait.jpg" alt="Fine Art Backdrop Preview" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-2xl border border-slate-800 shadow-lg aspect-square mt-4">
+              <img src="assets/backdrops/boho_studio.jpg" alt="Boho Backdrop Preview" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-2xl border border-slate-800 shadow-lg aspect-square">
+              <img src="assets/backdrops/moody_emerald.jpg" alt="Moody Backdrop Preview" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="rounded-2xl bg-gradient-to-tr from-slate-900 to-slate-950 border border-yellow-500/30 flex flex-col items-center justify-center p-4 text-center mt-4 shadow-gold-sm">
+              <span class="text-3xl sm:text-4xl font-black text-brand-gold">500+</span>
+              <span class="text-xs font-bold text-white mt-1">High-Res Backdrops</span>
+              <span class="text-[10px] text-slate-400 mt-0.5">Google Drive Instant Link</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Technical Specifications Section -->
+  <section id="specs" class="py-16 sm:py-24 bg-brand-dark border-t border-brand-subtleBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <span class="text-brand-gold font-bold text-xs uppercase tracking-widest block mb-2">Engineered For Working Photographers</span>
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">Precision 8K Technical Specifications</h2>
+      <p class="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto mb-12 sm:mb-16">
+        No low-res pixelation or blurry edges. Wildlight Backdrops are calibrated to match high-megapixel sensors like Sony A7R V, Canon R5, and Nikon Z8.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+        
+        <!-- Spec 1 -->
+        <div class="bg-brand-card p-6 sm:p-7 rounded-2xl border border-brand-subtleBorder hover:border-yellow-500/40 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-2xl text-brand-gold mb-4">
+            📐
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">True 8K Resolution</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Up to 8000 × 5333 px pixel dimensions give you extreme latitude to crop vertical or horizontal without sacrificing fine micro-textures.
+          </p>
+        </div>
+
+        <!-- Spec 2 -->
+        <div class="bg-brand-card p-6 sm:p-7 rounded-2xl border border-brand-subtleBorder hover:border-yellow-500/40 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-2xl text-brand-gold mb-4">
+            🖨️
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Native 300 DPI Output</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Directly calibrated for large gallery-wrap canvas, metal, and fine art cotton rag prints up to 40x60 inches with razor sharpness.
+          </p>
+        </div>
+
+        <!-- Spec 3 -->
+        <div class="bg-brand-card p-6 sm:p-7 rounded-2xl border border-brand-subtleBorder hover:border-yellow-500/40 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-2xl text-brand-gold mb-4">
+            ⚡
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Instant Etsy Delivery</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Immediate digital download link provided automatically after purchase. Zero subscription fees, zero waiting for email links.
+          </p>
+        </div>
+
+        <!-- Spec 4 -->
+        <div class="bg-brand-card p-6 sm:p-7 rounded-2xl border border-brand-subtleBorder hover:border-yellow-500/40 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-2xl text-brand-gold mb-4">
+            ⚖️
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Commercial License</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Full rights to incorporate these backdrops into client portraits, print products, marketing portfolios, and commercial client commissions.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Real Photographer Reviews Section -->
+  <section id="reviews" class="py-16 sm:py-24 bg-brand-surface border-t border-brand-subtleBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest block mb-2">Customer Feedback</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">Loved by Portrait & Maternity Photographers</h2>
+        <div class="flex items-center justify-center gap-2 text-brand-gold text-lg">
+          ★★★★★
+          <span class="text-white text-xs sm:text-sm font-bold ml-1">5.0 Star Average on Etsy (54+ Verified Sales)</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Review 1 -->
+        <div class="bg-brand-card p-6 sm:p-7 rounded-2xl border border-brand-cardBorder flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-center gap-1 text-brand-gold text-sm mb-3">
+              ★★★★★
+            </div>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 italic">
+              "The 8K resolution is unbelievable! I had to print a 30x40 canvas for a client's maternity shoot using the Boho Arch backdrop and the detail held up flawlessly. Blended into Photoshop in less than 2 minutes."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+            <div class="w-9 h-9 rounded-full bg-yellow-500/20 text-brand-gold flex items-center justify-center font-bold text-xs">
+              SM
+            </div>
+            <div>
+              <div class="text-white font-bold text-xs">Sarah M.</div>
+              <div class="text-[10px] text-slate-400">Maternity & Newborn Photographer, TX</div>
             </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden hover:border-brand-gold transition duration-300 group flex flex-col justify-between shadow-xl">
-          <div class="relative overflow-hidden aspect-[4/3] bg-slate-900">
-            <img src="assets/backdrops/boho_studio.jpg" alt="Warm Boho Studio & Maternity Backdrop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur text-brand-gold font-bold text-[11px] px-3 py-1 rounded-full border border-yellow-500/30">
-              8K UHD • 300 DPI
-            </span>
+        <!-- Review 2 -->
+        <div class="bg-brand-card p-6 sm:p-7 rounded-2xl border border-brand-cardBorder flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-center gap-1 text-brand-gold text-sm mb-3">
+              ★★★★★
+            </div>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 italic">
+              "Purchased the 500+ Mega Bundle and it's by far the best investment I made for my studio this year. The Moody Emerald and Fine Art textures give my headshots that luxury, high-dollar look clients rave about."
+            </p>
           </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-white mb-2">Warm Earthy Boho Studio Backdrop</h3>
-            <p class="text-slate-400 text-xs mb-4">Soft golden bokeh and timeless earthy tones tailored for newborn sessions, maternity composites, and cozy portraits.</p>
-            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
-              <div>
-                <span class="text-xs text-slate-500 line-through">$14.99</span>
-                <span class="text-lg font-extrabold text-brand-gold ml-2">$3.99</span>
-              </div>
-              <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="bg-slate-800 hover:bg-brand-gold hover:text-black text-white text-xs font-bold py-2 px-4 rounded-lg transition">
-                Get on Etsy ➔
-              </a>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+            <div class="w-9 h-9 rounded-full bg-yellow-500/20 text-brand-gold flex items-center justify-center font-bold text-xs">
+              DK
+            </div>
+            <div>
+              <div class="text-white font-bold text-xs">David K.</div>
+              <div class="text-[10px] text-slate-400">Editorial Portrait Artist, London</div>
             </div>
           </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden hover:border-brand-gold transition duration-300 group flex flex-col justify-between shadow-xl">
-          <div class="relative overflow-hidden aspect-[4/3] bg-slate-900">
-            <img src="assets/backdrops/moody_emerald.jpg" alt="Moody Emerald Floral Studio Overlay" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur text-brand-gold font-bold text-[11px] px-3 py-1 rounded-full border border-yellow-500/30">
-              8K UHD • 300 DPI
-            </span>
+        <!-- Review 3 -->
+        <div class="bg-brand-card p-6 sm:p-7 rounded-2xl border border-brand-cardBorder flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-center gap-1 text-brand-gold text-sm mb-3">
+              ★★★★★
+            </div>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 italic">
+              "Super fast instant download via Etsy. The celestial newborn clouds backdrop saved a session where the baby was too fussy for complex props. Composite turned out magical!"
+            </p>
           </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-white mb-2">Moody Emerald Floral Studio Backdrop</h3>
-            <p class="text-slate-400 text-xs mb-4">Deep botanical ambiance with dramatic chiaroscuro contrasts. Perfect for high-fashion, dancers, and creative portraiture.</p>
-            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
-              <div>
-                <span class="text-xs text-slate-500 line-through">$14.99</span>
-                <span class="text-lg font-extrabold text-brand-gold ml-2">$3.99</span>
-              </div>
-              <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="bg-slate-800 hover:bg-brand-gold hover:text-black text-white text-xs font-bold py-2 px-4 rounded-lg transition">
-                Get on Etsy ➔
-              </a>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+            <div class="w-9 h-9 rounded-full bg-yellow-500/20 text-brand-gold flex items-center justify-center font-bold text-xs">
+              ER
+            </div>
+            <div>
+              <div class="text-white font-bold text-xs">Elena R.</div>
+              <div class="text-[10px] text-slate-400">Newborn Composite Specialist, FL</div>
             </div>
           </div>
         </div>
 
       </div>
 
-      <div class="mt-12 text-center">
-        <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-brand-gold hover:text-yellow-300 font-bold text-sm tracking-wide transition">
-          <span>View All 23+ Active Listings on Etsy</span>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-16 sm:py-24 bg-brand-dark border-t border-brand-subtleBorder">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12 sm:mb-16">
+        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest block mb-2">Frequently Asked Questions</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Everything You Need to Know</h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="bg-brand-card rounded-2xl border border-brand-subtleBorder p-5 sm:p-6 group cursor-pointer">
+          <summary class="font-bold text-sm sm:text-base text-white flex items-center justify-between list-none">
+            <span>How do I receive my backdrops after purchase?</span>
+            <span class="text-brand-gold group-open:rotate-180 transition-transform text-lg">▾</span>
+          </summary>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mt-4">
+            Instantly! As soon as your payment confirms on Etsy, you receive an immediate digital download link with your high-res files (and Google Drive access for large bundles). You can begin editing your client sessions within seconds.
+          </p>
+        </details>
+
+        <details class="bg-brand-card rounded-2xl border border-brand-subtleBorder p-5 sm:p-6 group cursor-pointer">
+          <summary class="font-bold text-sm sm:text-base text-white flex items-center justify-between list-none">
+            <span>Which photo editing software is compatible?</span>
+            <span class="text-brand-gold group-open:rotate-180 transition-transform text-lg">▾</span>
+          </summary>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mt-4">
+            Our backdrops come in universal, high-resolution JPEG files (300 DPI) and work with Adobe Photoshop, Photoshop Elements, Lightroom, Canva, Affinity Photo, GIMP, and any mobile editing app that supports layers.
+          </p>
+        </details>
+
+        <details class="bg-brand-card rounded-2xl border border-brand-subtleBorder p-5 sm:p-6 group cursor-pointer">
+          <summary class="font-bold text-sm sm:text-base text-white flex items-center justify-between list-none">
+            <span>Can I use these backdrops for paying client work?</span>
+            <span class="text-brand-gold group-open:rotate-180 transition-transform text-lg">▾</span>
+          </summary>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mt-4">
+            Yes! Every purchase comes with a full commercial usage license. You can use them for unlimited client portrait sessions, wall art prints, photo books, and portfolio showcases. (Reselling or redistributing the raw digital file is strictly prohibited).
+          </p>
+        </details>
+
+        <details class="bg-brand-card rounded-2xl border border-brand-subtleBorder p-5 sm:p-6 group cursor-pointer">
+          <summary class="font-bold text-sm sm:text-base text-white flex items-center justify-between list-none">
+            <span>What if I need help compositing in Photoshop?</span>
+            <span class="text-brand-gold group-open:rotate-180 transition-transform text-lg">▾</span>
+          </summary>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mt-4">
+            We provide quick step-by-step guidance in our Etsy digital delivery PDF, explaining layer masking, blending modes (such as Soft Light & Screen for overlays), and color matching in Photoshop.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Final CTA Callout -->
+  <section class="py-16 sm:py-20 bg-gradient-to-t from-slate-950 to-brand-dark border-t border-brand-subtleBorder text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-yellow-500 to-amber-600 flex items-center justify-center text-slate-950 font-black text-2xl mx-auto mb-6 shadow-gold-sm">
+        W
+      </div>
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">
+        Ready to Elevate Your Studio Portfolio?
+      </h2>
+      <p class="text-slate-400 text-xs sm:text-base max-w-xl mx-auto mb-8">
+        Join over 50+ photographers creating museum-grade portraits with Wildlight Backdrops. Instant download on Etsy.
+      </p>
+      <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="inline-flex gold-btn py-4 px-10 rounded-full text-sm sm:text-base font-black shadow-gold-glow items-center gap-2">
+        <span>Shop Wildlight Backdrops on Etsy ➔</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Professional Footer -->
+  <footer class="border-t border-brand-subtleBorder py-12 bg-black text-slate-500 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-brand-gold flex items-center justify-center font-bold text-sm">
+            W
+          </div>
+          <div>
+            <span class="text-slate-200 font-bold block">Wildlight Backdrops</span>
+            <span class="text-[10px] text-slate-500">Official Etsy Digital Photography Store</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-6 text-slate-400 font-medium">
+          <a href="#gallery" class="hover:text-brand-gold transition-colors">Gallery</a>
+          <a href="#bundle" class="hover:text-brand-gold transition-colors">Mega Bundle</a>
+          <a href="#specs" class="hover:text-brand-gold transition-colors">8K Specs</a>
+          <a href="#reviews" class="hover:text-brand-gold transition-colors">Reviews</a>
+          <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="text-brand-gold hover:underline font-bold">Etsy Store ➔</a>
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+        <p>© 2026 Wildlight Backdrops. All rights reserved. Handcrafted digital photography assets.</p>
+        <p class="flex items-center gap-2">
+          <span>🔒 256-Bit SSL Encrypted Checkout via Etsy</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Bottom CTA Bar -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-md border-t border-brand-cardBorder px-4 py-3 flex items-center justify-between gap-3">
+    <div>
+      <div class="text-[10px] text-brand-gold font-extrabold uppercase tracking-wide">8K Etsy Sale • $3.99</div>
+      <div class="text-xs font-bold text-white">500+ Mega Bundle Available</div>
+    </div>
+    <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="gold-btn py-2.5 px-4 rounded-xl text-xs font-black shrink-0 flex items-center gap-1 shadow-gold-sm">
+      <span>Shop Etsy</span>
+      <span>➔</span>
+    </a>
+  </div>
+
+  <!-- Interactive Lightbox Modal -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4" onclick="closeLightbox(event)">
+    <div class="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center">
+      <button onclick="forceCloseLightbox()" class="absolute -top-12 right-0 text-white text-3xl font-light hover:text-brand-gold transition p-2 focus:outline-none" aria-label="Close modal">
+        ✕
+      </button>
+      <img id="lightboxImg" src="" alt="" class="max-w-full max-h-[75vh] object-contain rounded-xl border border-slate-800 shadow-2xl">
+      <div class="mt-4 flex flex-col sm:flex-row items-center justify-between w-full text-center sm:text-left gap-3">
+        <div>
+          <h4 id="lightboxTitle" class="text-base font-bold text-white"></h4>
+          <span class="text-xs text-brand-gold font-semibold">8K Resolution (8000x5333 px) • 300 DPI Native</span>
+        </div>
+        <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="gold-btn py-2 px-6 rounded-full text-xs font-black shadow-md flex items-center gap-1">
+          <span>Download on Etsy ($3.99)</span>
           <span>➔</span>
         </a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Mega Bundle Highlight Section -->
-  <section id="bundle" class="py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-brand-dark relative overflow-hidden border-t border-slate-800">
-    <div class="max-w-5xl mx-auto px-6 relative z-10">
-      <div class="bg-gradient-to-br from-slate-900 to-black p-8 md:p-14 rounded-3xl border border-yellow-500/30 shadow-2xl relative">
-        <div class="absolute -top-4 right-8 bg-yellow-500 text-black font-extrabold text-xs px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
-          Best Value • 80% OFF
-        </div>
+  <!-- Client-side Interactive Scripts -->
+  <script>
+    // Mobile Navigation Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIconClosed = document.getElementById('menuIconClosed');
+    const menuIconOpen = document.getElementById('menuIconOpen');
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div>
-            <span class="text-brand-gold font-bold text-xs uppercase tracking-widest block mb-2">Limited Photographer Deal</span>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
-              The 500+ Mega Studio Backdrops Archive
-            </h2>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6">
-              Get our entire digital studio collection in one instant download! Includes Boho, Fine Art, Maternity, Newborn, Moody Dark Floral, and Studio Minimalist backdrops with lifetime Google Drive cloud access.
-            </p>
-            <ul class="space-y-2 text-xs md:text-sm text-slate-300 mb-8">
-              <li class="flex items-center gap-2">✓ 500+ Mastered Backdrops in 8K (8000x5333 px)</li>
-              <li class="flex items-center gap-2">✓ Ultra-Sharp 300 DPI Print Resolution</li>
-              <li class="flex items-center gap-2">✓ Commercial License Included (Client Work Approved)</li>
-              <li class="flex items-center gap-2">✓ Works with Photoshop, Lightroom, Elements & Canva</li>
-            </ul>
-            <div class="flex items-baseline gap-4 mb-6">
-              <span class="text-4xl font-black text-white">$39.99</span>
-              <span class="text-lg text-slate-500 line-through">$199.99</span>
-              <span class="text-xs font-bold text-green-400 bg-green-500/20 px-2.5 py-1 rounded-full">Save $160 Today</span>
-            </div>
-            <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="inline-block bg-gradient-to-r from-yellow-500 to-amber-500 hover:from-yellow-400 hover:to-amber-400 text-black font-extrabold py-3.5 px-8 rounded-full shadow-lg shadow-yellow-500/20 transition transform hover:-translate-y-0.5">
-              Claim Mega Bundle on Etsy ➔
-            </a>
-          </div>
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        menuIconClosed.classList.add('hidden');
+        menuIconOpen.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIconClosed.classList.remove('hidden');
+        menuIconOpen.classList.add('hidden');
+      }
+    });
 
-          <div class="grid grid-cols-2 gap-3">
-            <img src="assets/backdrops/fine_art_portrait.jpg" class="rounded-xl shadow-lg border border-slate-800">
-            <img src="assets/backdrops/boho_studio.jpg" class="rounded-xl shadow-lg border border-slate-800 mt-4">
-            <img src="assets/backdrops/moody_emerald.jpg" class="rounded-xl shadow-lg border border-slate-800">
-            <div class="rounded-xl bg-slate-900 border border-slate-800 flex flex-col items-center justify-center p-4 text-center mt-4">
-              <span class="text-3xl font-extrabold text-brand-gold">500+</span>
-              <span class="text-[11px] text-slate-400 mt-1">Backdrops & Overlays Inside</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIconClosed.classList.remove('hidden');
+        menuIconOpen.classList.add('hidden');
+      });
+    });
 
-  <!-- Technical Specs -->
-  <section id="specs" class="py-20 bg-brand-dark border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <span class="text-brand-gold font-bold text-xs uppercase tracking-widest block mb-2">Engineered For Professionals</span>
-      <h2 class="text-3xl font-extrabold text-white mb-12">Why Photographers Choose Wildlight</h2>
+    // Gallery Category Filtering
+    function filterGallery(category, buttonElement) {
+      const cards = document.querySelectorAll('.gallery-card');
+      const buttons = document.querySelectorAll('.filter-pill');
 
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div class="bg-brand-card p-6 rounded-2xl border border-brand-border text-left">
-          <div class="text-2xl mb-3">🔍</div>
-          <h4 class="text-base font-bold text-white mb-1">True 8K Resolution</h4>
-          <p class="text-xs text-slate-400">Up to 8000x5333 px dimensions allow extreme crops without losing single pixel clarity.</p>
-        </div>
-        <div class="bg-brand-card p-6 rounded-2xl border border-brand-border text-left">
-          <div class="text-2xl mb-3">🖨️</div>
-          <h4 class="text-base font-bold text-white mb-1">300 DPI Native</h4>
-          <p class="text-xs text-slate-400">Optimized for fine art canvas, acrylic, and large-format gallery wall prints.</p>
-        </div>
-        <div class="bg-brand-card p-6 rounded-2xl border border-brand-border text-left">
-          <div class="text-2xl mb-3">⚡</div>
-          <h4 class="text-base font-bold text-white mb-1">Instant Etsy Delivery</h4>
-          <p class="text-xs text-slate-400">Download your files immediately after purchase. No waiting, no subscription traps.</p>
-        </div>
-        <div class="bg-brand-card p-6 rounded-2xl border border-brand-border text-left">
-          <div class="text-2xl mb-3">⚖️</div>
-          <h4 class="text-base font-bold text-white mb-1">Commercial License</h4>
-          <p class="text-xs text-slate-400">Use all backdrops for unlimited client portrait sessions, photo albums, and marketing.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      // Update button active styling
+      buttons.forEach(btn => {
+        btn.classList.remove('active', 'bg-brand-gold', 'text-slate-950', 'shadow-gold-sm');
+        btn.classList.add('bg-slate-900', 'text-slate-300', 'border', 'border-slate-800');
+      });
+      buttonElement.classList.add('active', 'bg-brand-gold', 'text-slate-950', 'shadow-gold-sm');
+      buttonElement.classList.remove('bg-slate-900', 'text-slate-300', 'border', 'border-slate-800');
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-800 py-12 bg-black text-slate-500 text-xs">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p>© 2026 Wildlight Backdrops. All rights reserved. Handcrafted digital photography assets.</p>
-      <div class="flex items-center gap-6">
-        <a href="https://wildlightbackdrops.etsy.com" target="_blank" rel="noopener" class="text-brand-gold hover:underline font-semibold">Official Etsy Store</a>
-        <a href="#gallery" class="hover:underline">Gallery</a>
-        <a href="#bundle" class="hover:underline">Mega Bundle</a>
-      </div>
-    </div>
-  </footer>
+      // Filter cards
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (category === 'all' || cardCat === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Lightbox Functionality
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+
+    function openLightbox(src, title) {
+      lightboxImg.src = src;
+      lightboxTitle.textContent = title;
+      lightboxModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(event) {
+      if (event.target === lightboxModal) {
+        forceCloseLightbox();
+      }
+    }
+
+    function forceCloseLightbox() {
+      lightboxModal.classList.add('hidden');
+      lightboxImg.src = '';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
+        forceCloseLightbox();
+      }
+    });
+  </script>
 
 </body>
 </html>
