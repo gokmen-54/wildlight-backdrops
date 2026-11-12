@@ -1,72 +1,112 @@
 [
   {
     "id": 1,
-    "title": "Back to School Digital Backdrop | Kids Classroom Photo Background | School Portrait Photoshop Overlay | First Day of School Prop by WildlightBackdrops",
+    "title": "Back to School Digital Backdrop",
+    "subtitle": "Kids Classroom Photo Background | School Portrait Photoshop Overlay | First Day of School Prop",
+    "category": "Digital Backdrop",
+    "cat_filter": "backdrop",
     "link": "https://www.etsy.com/listing/4324086389/back-to-school-digital-backdrop-kids?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/4844bc/7007170283/il_794xN.7007170283_mva6.jpg",
-    "thumb": "https://i.etsystatic.com/21583097/r/il/4844bc/7007170283/il_570xN.7007170283_mva6.jpg"
+    "price_try": "400,00 TL",
+    "price_usd": "$11.43"
   },
   {
     "id": 2,
-    "title": "The Introvert Society PNG, Introvert Shirt Design, Cozy Reader PNG, Book Lover Sublimation, Cricut DTF Digital Download by WildlightBackdrops",
+    "title": "The Introvert Society PNG",
+    "subtitle": "Introvert Shirt Design, Cozy Reader PNG, Book Lover Sublimation, Cricut DTF Digital Download",
+    "category": "BookTok & Cozy",
+    "cat_filter": "booktok",
     "link": "https://www.etsy.com/listing/4542040422/the-introvert-society-png-introvert?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/5ff06a/8331439327/il_794xN.8331439327_f4cq.jpg",
-    "thumb": "https://i.etsystatic.com/21583097/r/il/5ff06a/8331439327/il_570xN.8331439327_f4cq.jpg"
+    "price_try": "189,99 TL",
+    "price_usd": "$5.43"
   },
   {
     "id": 3,
-    "title": "Booked and Unbothered PNG, Book Lover Shirt Design, Bookish PNG, Reading Sublimation, BookTok Cricut DTF Digital Download by WildlightBackdrops",
+    "title": "Booked and Unbothered PNG",
+    "subtitle": "Book Lover Shirt Design, Bookish PNG, Reading Sublimation, BookTok Cricut DTF Digital Download",
+    "category": "BookTok & Cozy",
+    "cat_filter": "booktok",
     "link": "https://www.etsy.com/listing/4542011988/booked-and-unbothered-png-book-lover?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/37e8fc/8331235501/il_794xN.8331235501_6iue.jpg",
-    "thumb": "https://i.etsystatic.com/21583097/r/il/37e8fc/8331235501/il_570xN.8331235501_6iue.jpg"
+    "price_try": "149,99 TL",
+    "price_usd": "$4.29"
   },
   {
     "id": 4,
-    "title": "Creepin It Cozy PNG, Cozy Halloween PNG, Ghost Shirt Design, Coquette Halloween Sublimation, Cricut DTF Download by WildlightBackdrops",
+    "title": "Creepin It Cozy PNG",
+    "subtitle": "Cozy Halloween PNG, Ghost Shirt Design, Coquette Halloween Sublimation, Cricut DTF Download",
+    "category": "Halloween & Spooky",
+    "cat_filter": "halloween",
     "link": "https://www.etsy.com/listing/4541962709/creepin-it-cozy-png-cozy-halloween-png?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/ef4466/8283096918/il_794xN.8283096918_9pl3.jpg",
-    "thumb": "https://i.etsystatic.com/21583097/r/il/ef4466/8283096918/il_570xN.8283096918_9pl3.jpg"
+    "price_try": "149,99 TL",
+    "price_usd": "$4.29"
   },
   {
     "id": 5,
-    "title": "In My Spooky Era PNG, Halloween Shirt Design, Coquette Ghost PNG, Retro Halloween Sublimation, Cricut DTF Download by WildlightBackdrops",
+    "title": "In My Spooky Era PNG",
+    "subtitle": "Halloween Shirt Design, Coquette Ghost PNG, Retro Halloween Sublimation, Cricut DTF Download",
+    "category": "Halloween & Spooky",
+    "cat_filter": "halloween",
     "link": "https://www.etsy.com/listing/4541818978/in-my-spooky-era-png-halloween-shirt?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/0e0dc8/8281754464/il_794xN.8281754464_u1zb.jpg",
-    "thumb": "https://i.etsystatic.com/21583097/r/il/0e0dc8/8281754464/il_570xN.8281754464_u1zb.jpg"
+    "price_try": "149,99 TL",
+    "price_usd": "$4.29"
   },
   {
     "id": 6,
-    "title": "Spooky Season PNG, Halloween Shirt Design, Cute Ghost PNG, Coquette Halloween Sublimation, Retro Fall Cricut DTF Download by WildlightBackdrops",
+    "title": "Spooky Season PNG",
+    "subtitle": "Halloween Shirt Design, Cute Ghost PNG, Coquette Halloween Sublimation, Retro Fall Cricut DTF Download",
+    "category": "Halloween & Spooky",
+    "cat_filter": "halloween",
     "link": "https://www.etsy.com/listing/4541785373/spooky-season-png-halloween-shirt-design?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/f606cc/8281618748/il_794xN.8281618748_jpdh.jpg",
-    "thumb": "https://i.etsystatic.com/21583097/r/il/f606cc/8281618748/il_570xN.8281618748_jpdh.jpg"
+    "price_try": "149,99 TL",
+    "price_usd": "$4.29"
   },
   {
     "id": 7,
-    "title": "Teach Love Inspire PNG, Teacher Shirt Design, Teacher PNG, Retro Teacher Sublimation, Back to School Cricut DTF Download by WildlightBackdrops",
+    "title": "Teach Love Inspire PNG",
+    "subtitle": "Teacher Shirt Design, Teacher PNG, Retro Teacher Sublimation, Back to School Cricut DTF Download",
+    "category": "Teacher Era",
+    "cat_filter": "teacher",
     "link": "https://www.etsy.com/listing/4541770173/teach-love-inspire-png-teacher-shirt?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/759eab/8281544294/il_794xN.8281544294_f3ie.jpg",
-    "thumb": "https://i.etsystatic.com/21583097/r/il/759eab/8281544294/il_570xN.8281544294_f3ie.jpg"
+    "price_try": "149,99 TL",
+    "price_usd": "$4.29"
   },
   {
     "id": 8,
-    "title": "Teacher Life PNG, Retro Teacher Shirt Design, Teacher Sublimation PNG, Back to School Graphic, Cricut DTF Digital Download by WildlightBackdrops",
+    "title": "Teacher Life PNG",
+    "subtitle": "Retro Teacher Shirt Design, Teacher Sublimation PNG, Back to School Graphic, Cricut DTF Digital Download",
+    "category": "Teacher Era",
+    "cat_filter": "teacher",
     "link": "https://www.etsy.com/listing/4541739286/teacher-life-png-retro-teacher-shirt?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/d9a6af/8281142384/il_794xN.8281142384_qn4f.jpg",
-    "thumb": "https://i.etsystatic.com/21583097/r/il/d9a6af/8281142384/il_570xN.8281142384_qn4f.jpg"
+    "price_try": "149,99 TL",
+    "price_usd": "$4.29"
   },
   {
     "id": 9,
-    "title": "İnstagram Birthday Magazine Template: Custom Canva Gift (Digital Download by WildlightBackdrops",
+    "title": "İnstagram Birthday Magazine Template: Custom Canva Gift (Digital Download",
+    "subtitle": "Instant High-Resolution Digital Download",
+    "category": "Canva Template",
+    "cat_filter": "canva",
     "link": "https://www.etsy.com/listing/4357178987/instagram-birthday-magazine-template?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/659dbe/7135025992/il_794xN.7135025992_hg4i.jpg",
-    "thumb": "https://i.etsystatic.com/21583097/r/il/659dbe/7135025992/il_570xN.7135025992_hg4i.jpg"
+    "price_try": "350,00 TL",
+    "price_usd": "$10.00"
   },
   {
     "id": 10,
-    "title": "Birthday Magazine Template For Best Friend | Custom Birthday Magazine | Vogue Style Magazine| Canva Gift | Personalized Gift | birthday gift by WildlightBackdrops",
+    "title": "Birthday Magazine Template For Best Friend",
+    "subtitle": "Custom Birthday Magazine | Vogue Style Magazine| Canva Gift | Personalized Gift | birthday gift",
+    "category": "Canva Template",
+    "cat_filter": "canva",
     "link": "https://www.etsy.com/listing/4354895929/birthday-magazine-template-for-best?ref=rss",
     "img": "https://i.etsystatic.com/21583097/r/il/981c2f/7170806581/il_794xN.7170806581_pdz7.jpg",
-    "thumb": "https://i.etsystatic.com/21583097/r/il/981c2f/7170806581/il_570xN.7170806581_pdz7.jpg"
+    "price_try": "300,00 TL",
+    "price_usd": "$8.57"
   }
 ]
