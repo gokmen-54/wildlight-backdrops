@@ -12,6 +12,7 @@ import re
 import urllib.request
 import xml.etree.ElementTree as ET
 import subprocess
+from datetime import datetime
 
 # UTF-8 stdout
 if sys.stdout.encoding != 'utf-8':
@@ -123,7 +124,31 @@ def fetch_live_etsy_listings():
 
 def build_page_html(listings):
     cards_html = ""
-    for item in listings:
+    ld_items = []
+    for idx, item in enumerate(listings):
+        raw_usd = item['usd'].replace('$', '').strip()
+        ld_items.append(f"""          {{
+            "@type": "ListItem",
+            "position": {idx + 1},
+            "item": {{
+              "@type": "Product",
+              "name": "{item['title']}",
+              "image": "{item['img']}",
+              "description": "{item['subtitle']}",
+              "sku": "WLD-{item['id']}",
+              "offers": {{
+                "@type": "Offer",
+                "price": "{raw_usd}",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "url": "{item['link']}",
+                "seller": {{
+                  "@type": "Organization",
+                  "name": "Wildlight Backdrops"
+                }}
+              }}
+            }}
+          }}""")
         cards_html += f"""
         <div class="product-card bg-slate-900 rounded-2xl border border-slate-800 hover:border-amber-400/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden group" data-category="{item['cat_filter']}">
           <div class="relative aspect-square overflow-hidden bg-slate-950 flex items-center justify-center p-3">
@@ -164,6 +189,7 @@ def build_page_html(listings):
         </div>
         """
 
+    json_items_ld = ",\n".join(ld_items)
     full_page = f"""<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -174,12 +200,16 @@ def build_page_html(listings):
   <meta name="keywords" content="digital backdrops, photography backdrops, booktok png, cozy reader sublimation, introvert shirt design, halloween png, retro teacher dtf, canva birthday magazine template, instant download etsy">
   <link rel="canonical" href="https://wildlightbackdrops.etsy.com">
 
-  <!-- Open Graph -->
+  <!-- Pinterest & Facebook Open Graph Product Meta -->
+  <meta property="og:type" content="product">
   <meta property="og:title" content="Wildlight Backdrops & Digital Designs | Official Etsy Store">
   <meta property="og:description" content="Instant download digital backdrops, BookTok PNGs, retro Halloween sublimation and Canva templates. 5-Star rated on Etsy.">
   <meta property="og:image" content="{listings[0]['img'] if listings else ''}">
-  <meta property="og:url" content="https://wildlightbackdrops.etsy.com">
-  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gokmen-54.github.io/wildlight-backdrops/">
+  <meta property="product:price:amount" content="{listings[0]['usd'].replace('$', '') if listings else '4.29'}">
+  <meta property="product:price:currency" content="USD">
+  <meta property="og:availability" content="instock">
+  <meta name="pinterest-rich-pin" content="true">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -194,20 +224,32 @@ def build_page_html(listings):
     body {{ font-family: 'Plus Jakarta Sans', sans-serif; }}
   </style>
 
-  <!-- Google Structured Data (JSON-LD) -->
+  <!-- Google & Pinterest Structured Data (JSON-LD ItemList & Products) -->
   <script type="application/ld+json">
   {{
     "@context": "https://schema.org",
-    "@type": "Store",
-    "name": "Wildlight Backdrops",
-    "url": "https://gokmen-54.github.io/wildlight-backdrops/",
-    "sameAs": "https://wildlightbackdrops.etsy.com",
-    "description": "Handcrafted digital photography backdrops, sublimation PNG designs, and customizable Canva templates.",
-    "aggregateRating": {{
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "54"
-    }}
+    "@graph": [
+      {{
+        "@type": "Store",
+        "@id": "https://gokmen-54.github.io/wildlight-backdrops/#store",
+        "name": "Wildlight Backdrops",
+        "url": "https://gokmen-54.github.io/wildlight-backdrops/",
+        "sameAs": "https://wildlightbackdrops.etsy.com",
+        "description": "Handcrafted digital photography backdrops, sublimation PNG designs, and customizable Canva templates.",
+        "aggregateRating": {{
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "54"
+        }}
+      }},
+      {{
+        "@type": "ItemList",
+        "name": "Featured Digital Products",
+        "itemListElement": [
+{json_items_ld}
+        ]
+      }}
+    ]
   }}
   </script>
 </head>
@@ -415,9 +457,31 @@ def sync_and_deploy():
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(listings, f, indent=2, ensure_ascii=False)
 
+    # Generate sitemap.xml and robots.txt for Google & Pinterest
+    sitemap_path = os.path.join(SHOWCASE_DIR, "sitemap.xml")
+    today = datetime.now().strftime("%Y-%m-%d")
+    with open(sitemap_path, "w", encoding="utf-8") as f:
+        f.write(f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://gokmen-54.github.io/wildlight-backdrops/</loc>
+    <lastmod>{today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+""")
+
+    robots_path = os.path.join(SHOWCASE_DIR, "robots.txt")
+    with open(robots_path, "w", encoding="utf-8") as f:
+        f.write(f"""User-agent: *
+Allow: /
+Sitemap: https://gokmen-54.github.io/wildlight-backdrops/sitemap.xml
+""")
+
     # Git push to GitHub Pages
     subprocess.run(["git", "add", "."], cwd=SHOWCASE_DIR, check=True)
-    subprocess.run(["git", "commit", "-m", "feat: 100% native English international storefront with USD/EUR/GBP currencies"], cwd=SHOWCASE_DIR)
+    subprocess.run(["git", "commit", "-m", "feat: complete Google & Pinterest SEO schema, rich snippets, sitemap and robots.txt"], cwd=SHOWCASE_DIR)
     res = subprocess.run(["git", "push", "origin", "main"], cwd=SHOWCASE_DIR, capture_output=True, text=True)
     print("[ETSY-SYNC] Deployed to GitHub Pages:", res.stdout, res.stderr)
 
