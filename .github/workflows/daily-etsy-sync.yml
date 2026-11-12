@@ -1,0 +1,38 @@
+name: Daily Autonomous Etsy Catalog & Price Sync
+
+on:
+  schedule:
+    # Runs daily at 05:00 UTC (08:00 TR Time)
+    - cron: '0 5 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  sync-etsy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Etsy Sync Engine
+        run: |
+          python sync_etsy_showcase.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html etsy_listings.json sitemap.xml robots.txt
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(etsy): daily autonomous catalog & price sync [skip ci]"
+            git push origin main
+          fi
