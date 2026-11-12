@@ -289,6 +289,35 @@ def build_page_html(listings):
         "itemListElement": [
 {json_items_ld}
         ]
+      }},
+      {{
+        "@type": "FAQPage",
+        "mainEntity": [
+          {{
+            "@type": "Question",
+            "name": "How do I download my digital backdrops and designs?",
+            "acceptedAnswer": {{
+              "@type": "Answer",
+              "text": "Immediately upon checkout, high-resolution 300 DPI files are delivered to your email. If purchased on Etsy, they are also available instantly in your Etsy downloads."
+            }}
+          }},
+          {{
+            "@type": "Question",
+            "name": "Are commercial licenses included for photographers and crafters?",
+            "acceptedAnswer": {{
+              "@type": "Answer",
+              "text": "Yes! Every digital backdrop and PNG graphic includes standard commercial licensing for photo studio sessions, client portraiture, and physical merchandise."
+            }}
+          }},
+          {{
+            "@type": "Question",
+            "name": "Can I request custom studio backdrop resolutions or custom designs?",
+            "acceptedAnswer": {{
+              "@type": "Answer",
+              "text": "Yes, click the Direct Order / Request button on any design or email our studio desk directly at gomoto253@gmail.com. We respond within 1 hour."
+            }}
+          }}
+        ]
       }}
     ]
   }}
@@ -405,6 +434,27 @@ def build_page_html(listings):
       {cards_html}
     </div>
 
+  </section>
+
+  <!-- FAQ Section for Google & Search Ranking -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12 border-t border-slate-800">
+    <div class="bg-slate-900/60 rounded-3xl border border-slate-800 p-8 sm:p-10">
+      <h2 class="text-xl sm:text-2xl font-black text-white mb-6">Frequently Asked Questions (FAQ)</h2>
+      <div class="space-y-6 text-xs sm:text-sm text-slate-300">
+        <div class="border-b border-slate-800/80 pb-4">
+          <h3 class="font-bold text-amber-400 mb-1">How do I download my digital backdrops and designs?</h3>
+          <p class="text-slate-400 leading-relaxed">Immediately upon order completion, you will receive full-resolution 300 DPI master files straight to your email. If purchased on Etsy, downloads are also available immediately in your Etsy account dashboard.</p>
+        </div>
+        <div class="border-b border-slate-800/80 pb-4">
+          <h3 class="font-bold text-amber-400 mb-1">Are commercial licenses included for photographers and crafters?</h3>
+          <p class="text-slate-400 leading-relaxed">Yes! All photography backdrops and PNG graphics include standard commercial licensing for photo studio sessions, client portrait composites, and physical merchandise printing.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-amber-400 mb-1">Can I request custom resolutions or seasonal backdrops?</h3>
+          <p class="text-slate-400 leading-relaxed">Absolutely. Click the Direct Order / Request button on any design or email our studio desk directly at <b>{STUDIO_EMAIL}</b>. We deliver custom requests and adaptations within 1 hour.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- How Direct Orders Work Section -->
