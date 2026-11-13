@@ -120,19 +120,22 @@ def fetch_live_etsy_listings():
             "is_on_etsy": True
         })
 
-    # Merge extra seasonal & custom backdrop listings (0 listing fee until ordered)
+    # 5. Put Curated Studio Backdrops FIRST!
+    final_listings = []
     if os.path.exists(EXTRA_CATALOG_PATH):
         try:
             with open(EXTRA_CATALOG_PATH, "r", encoding="utf-8") as f:
                 extra_items = json.load(f)
-                print(f"[ETSY-SYNC] Merging {len(extra_items)} extra seasonal & custom listings.")
+                print(f"[ETSY-SYNC] Merging {len(extra_items)} premium studio backdrops at TOP.")
                 for x in extra_items:
                     x["is_on_etsy"] = not x.get("is_request_first", False)
-                    listings.append(x)
+                    final_listings.append(x)
         except Exception as e:
             print(f"[UYARI] Extra catalog load error: {e}")
 
-    return listings
+    # Append any relevant RSS listings
+    final_listings.extend(listings)
+    return final_listings
 
 
 def build_page_html(listings):
@@ -193,11 +196,13 @@ def build_page_html(listings):
         </button>
         """
 
+        specs_html = f"""<div class="text-[10px] text-amber-300 font-mono bg-amber-950/50 border border-amber-800/50 rounded-md px-2 py-0.5 mb-2 inline-block">📐 {item['specs']}</div>""" if item.get('specs') else ""
+
         cards_html += f"""
         <div class="product-card bg-slate-900 rounded-2xl border border-slate-800 hover:border-amber-400/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden group" data-category="{item['cat_filter']}">
-          <div class="relative aspect-square overflow-hidden bg-slate-950 flex items-center justify-center p-3">
+          <div class="relative aspect-square overflow-hidden bg-slate-950 flex items-center justify-center p-2">
             {badge_html}
-            <img src="{item['img']}" alt="{item['title']}" class="w-full h-full object-contain group-hover:scale-105 transition duration-500 rounded-lg" loading="lazy">
+            <img src="{item['img']}" alt="{item['title']}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 rounded-xl" loading="lazy">
           </div>
           
           <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
@@ -208,6 +213,7 @@ def build_page_html(listings):
               <h3 class="font-extrabold text-white text-sm sm:text-base leading-snug line-clamp-2 mb-1.5 group-hover:text-amber-400 transition">
                 {item['title']}
               </h3>
+              {specs_html}
               <p class="text-slate-400 text-xs line-clamp-2 leading-relaxed mb-4">
                 {item['subtitle']}
               </p>
