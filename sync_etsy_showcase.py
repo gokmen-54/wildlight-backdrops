@@ -785,7 +785,9 @@ def build_pinterest_feed_xml(listings):
         category = item.get("category", "Photography Backdrops").replace("&", "&amp;")
         price = item.get("usd", "$12.99")
         
-        desc = f"{subtitle} Instant High-Resolution 8000x5333 px digital download (300 DPI). Price: {price}. Perfect for Photoshop, Canva, newborn, holiday, and portrait composites. Available at Wildlight Studio."
+        # High-Ranking Pinterest SEO Keywords & Niche Hashtags
+        hashtags = "#digitalbackdrop #photoshopbackdrop #christmasminis #holidayportraits #newbornphotography #fineartphotography #photographystudio #digitalprop"
+        desc = f"{subtitle} | Instant High-Resolution 8000x5333 px (300 DPI) digital backdrop for Photoshop, Canva, and Lightroom composite photography. Perfect for holiday mini sessions, luxury Christmas newborn portraits, winter maternity, and fine art family studio composites. Available at Wildlight Studio. {hashtags}"
         desc_escaped = desc.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
         
         xml_items.append(f"""    <item>
