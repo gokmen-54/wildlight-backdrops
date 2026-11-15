@@ -757,6 +757,63 @@ def build_page_html(listings):
     return full_page
 
 
+def build_pinterest_feed_xml(listings):
+    """
+    Generates a Pinterest-compliant RSS 2.0 feed with Media RSS & Enclosure tags.
+    Pinterest Business can auto-publish Pins from this feed 24/7 directly from the cloud.
+    """
+    now_rfc822 = datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S +0000")
+    
+    xml_items = []
+    base_site_url = "https://gokmen-54.github.io/wildlight-backdrops"
+    
+    for idx, item in enumerate(listings):
+        title = item.get("title", "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").strip()
+        subtitle = item.get("subtitle", "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").strip()
+        raw_img = item.get("img", "")
+        
+        if raw_img.startswith("http"):
+            img_url = raw_img
+        else:
+            img_url = f"{base_site_url}/{raw_img.lstrip('/')}"
+            
+        link = item.get("link", base_site_url)
+        if not link.startswith("http"):
+            link = base_site_url
+            
+        guid = f"wildlight-{item.get('id', idx)}-{item.get('cat_filter', 'backdrop')}"
+        category = item.get("category", "Photography Backdrops").replace("&", "&amp;")
+        price = item.get("usd", "$12.99")
+        
+        desc = f"{subtitle} Instant High-Resolution 8000x5333 px digital download (300 DPI). Price: {price}. Perfect for Photoshop, Canva, newborn, holiday, and portrait composites. Available at Wildlight Studio."
+        desc_escaped = desc.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        
+        xml_items.append(f"""    <item>
+      <title>{title}</title>
+      <link>{link}</link>
+      <guid isPermaLink="false">{guid}</guid>
+      <pubDate>{now_rfc822}</pubDate>
+      <category>{category}</category>
+      <description>{desc_escaped}</description>
+      <enclosure url="{img_url}" type="image/jpeg" length="750000" />
+      <media:content url="{img_url}" type="image/jpeg" medium="image" />
+    </item>""")
+
+    feed_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Wildlight Backdrops | Luxury Digital Backdrops &amp; Photography Props</title>
+    <link>{base_site_url}/</link>
+    <description>Ultra-high-resolution digital backdrops, painterly fine art textures, and holiday props for professional photographers.</description>
+    <language>en-us</language>
+    <lastBuildDate>{now_rfc822}</lastBuildDate>
+{chr(10).join(xml_items)}
+  </channel>
+</rss>
+"""
+    return feed_xml
+
+
 def sync_and_deploy():
     listings = fetch_live_etsy_listings()
     if not listings:
@@ -794,6 +851,13 @@ def sync_and_deploy():
 Allow: /
 Sitemap: https://gokmen-54.github.io/wildlight-backdrops/sitemap.xml
 """)
+
+    # Generate Pinterest Auto-Publish XML feed
+    pinterest_feed_path = os.path.join(SHOWCASE_DIR, "pinterest_feed.xml")
+    feed_xml_content = build_pinterest_feed_xml(listings)
+    with open(pinterest_feed_path, "w", encoding="utf-8") as f:
+        f.write(feed_xml_content)
+    print(f"[ETSY-SYNC] {pinterest_feed_path} generated for 24/7 Pinterest Auto-Publishing.")
 
     # Git push to GitHub Pages
     subprocess.run(["git", "add", "."], cwd=SHOWCASE_DIR, check=True)
