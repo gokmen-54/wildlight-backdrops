@@ -178,7 +178,20 @@ def build_page_html(listings):
           }}""")
 
         # Buttons logic
-        if item.get("is_on_etsy", True):
+        if item.get("cat_filter") == "freebie":
+            badge_html = f"""<span class="absolute top-3 left-3 bg-emerald-600/95 backdrop-blur text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-1 rounded-full border border-emerald-300/40 z-10 shadow">🎁 100% FREE GIFT</span>"""
+            etsy_btn_html = f"""
+            <a href="{item['link']}" download="Wildlight_Free_4K_Holiday_Snow_Overlay.png" onclick="showUpsellModal()" class="w-full bg-gradient-to-r from-emerald-400 via-green-400 to-emerald-500 hover:from-emerald-300 hover:to-green-300 text-slate-950 font-black text-xs sm:text-sm py-2.5 px-3 rounded-xl shadow-md shadow-emerald-400/20 transition flex items-center justify-center gap-1.5">
+              <span>🎁 Free Instant Download (4K PNG)</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            </a>
+            """
+            direct_order_btn = f"""
+            <a href="https://www.etsy.com/listing/4300075285/christmas-digital-backdrop-bundle-8k" target="_blank" rel="noopener" class="w-full bg-slate-800 hover:bg-slate-700 hover:border-amber-400 text-amber-300 border border-slate-700 font-bold text-xs py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5 mt-2">
+              <span>⭐ Get Complete 8K Holiday Vault (40% OFF)</span>
+            </a>
+            """
+        elif item.get("is_on_etsy", True):
             etsy_btn_html = f"""
             <a href="{item['link']}" target="_blank" rel="noopener" class="w-full bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-black text-xs sm:text-sm py-2.5 px-3 rounded-xl shadow-md shadow-amber-400/15 transition flex items-center justify-center gap-1.5">
               <span>Buy on Etsy</span>
@@ -186,15 +199,19 @@ def build_page_html(listings):
             </a>
             """
             badge_html = f"""<span class="absolute top-3 left-3 bg-black/85 backdrop-blur text-amber-400 font-extrabold text-[10px] sm:text-xs px-2.5 py-1 rounded-full border border-amber-400/30 z-10 shadow">{item['category']}</span>"""
+            direct_order_btn = f"""
+            <button onclick="openOrderModal('{clean_title}', '{item['usd']}', '{direct_usd}', '{clean_img}', '{clean_link}', {str(item.get('is_on_etsy', True)).lower()})" class="w-full bg-slate-800 hover:bg-slate-700 hover:border-emerald-500 text-emerald-400 border border-slate-700 font-bold text-xs py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5 mt-2">
+              <span>⚡ Direct Order / Request (Save 10%)</span>
+            </button>
+            """
         else:
             etsy_btn_html = ""
             badge_html = f"""<span class="absolute top-3 left-3 bg-indigo-600/90 backdrop-blur text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-1 rounded-full border border-indigo-400/30 z-10 shadow">✨ SEASONAL REQUEST</span>"""
-
-        direct_order_btn = f"""
-        <button onclick="openOrderModal('{clean_title}', '{item['usd']}', '{direct_usd}', '{clean_img}', '{clean_link}', {str(item.get('is_on_etsy', True)).lower()})" class="w-full bg-slate-800 hover:bg-slate-700 hover:border-emerald-500 text-emerald-400 border border-slate-700 font-bold text-xs py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5 mt-2">
-          <span>⚡ Direct Order / Request (Save 10%)</span>
-        </button>
-        """
+            direct_order_btn = f"""
+            <button onclick="openOrderModal('{clean_title}', '{item['usd']}', '{direct_usd}', '{clean_img}', '{clean_link}', {str(item.get('is_on_etsy', True)).lower()})" class="w-full bg-slate-800 hover:bg-slate-700 hover:border-emerald-500 text-emerald-400 border border-slate-700 font-bold text-xs py-2 px-3 rounded-xl transition flex items-center justify-center gap-1.5 mt-2">
+              <span>⚡ Direct Order / Request (Save 10%)</span>
+            </button>
+            """
 
         specs_html = f"""<div class="text-[10px] text-amber-300 font-mono bg-amber-950/50 border border-amber-800/50 rounded-md px-2 py-0.5 mb-2 inline-block">📐 {item['specs']}</div>""" if item.get('specs') else ""
 
@@ -427,6 +444,7 @@ def build_page_html(listings):
       <!-- Interactive Filter Buttons -->
       <div class="flex flex-wrap items-center gap-2 text-xs font-bold" id="filter-container">
         <button class="filter-btn active bg-amber-400 text-slate-950 px-4 py-2 rounded-full shadow-md" data-filter="all">All Designs ({len(listings)})</button>
+        <button class="filter-btn bg-emerald-950/80 hover:bg-emerald-900 text-emerald-300 border border-emerald-500/50 px-4 py-2 rounded-full transition font-black shadow-sm" data-filter="freebie">🎁 Free Holiday Gift (0$)</button>
         <button class="filter-btn bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 px-4 py-2 rounded-full transition" data-filter="backdrop">Backdrops</button>
         <button class="filter-btn bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 px-4 py-2 rounded-full transition" data-filter="booktok">BookTok & Cozy</button>
         <button class="filter-btn bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 px-4 py-2 rounded-full transition" data-filter="halloween">Spooky Halloween</button>
@@ -741,6 +759,24 @@ def build_page_html(listings):
           document.getElementById('copyBtnText').innerText = "✅ Copied to Clipboard! (Send to {STUDIO_EMAIL})";
         }});
       }}
+    }}
+
+    function showUpsellModal() {{
+      setTimeout(() => {{
+        const modal = document.getElementById('orderModal');
+        document.getElementById('modalItemImg').src = 'assets/backdrops/mega_holiday_bundle_vertical.jpg';
+        document.getElementById('modalItemTitle').innerText = '🎁 Free 4K Snow Overlay Downloaded! Complete Your Studio with the 8K Holiday Vault:';
+        document.getElementById('modalRegularPrice').innerText = '$19.99 (40% OFF)';
+        document.getElementById('modalDirectPrice').innerText = 'VIP Special';
+        const etsyBtn = document.getElementById('modalEtsyBtn');
+        if (etsyBtn) {{
+          etsyBtn.href = 'https://www.etsy.com/listing/4300075285/christmas-digital-backdrop-bundle-8k';
+          etsyBtn.classList.remove('hidden');
+          etsyBtn.innerText = '⭐ View 8K Mega Vault on Etsy (40% OFF)';
+        }}
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }}, 800);
     }}
 
     // Close on outer click
