@@ -24,7 +24,7 @@ if sys.stdout.encoding != 'utf-8':
         pass
 
 RSS_URL = "https://www.etsy.com/shop/WildlightBackdrops/rss"
-SHOWCASE_DIR = r"C:\Users\1247617\.gemini\antigravity\scratch\wildlight_showcase"
+SHOWCASE_DIR = os.path.dirname(os.path.abspath(__file__))
 HTML_PATH = os.path.join(SHOWCASE_DIR, "index.html")
 EXTRA_CATALOG_PATH = os.path.join(SHOWCASE_DIR, "catalog_extra.json")
 STUDIO_EMAIL = "gomoto253@gmail.com"
@@ -861,11 +861,15 @@ Sitemap: https://gokmen-54.github.io/wildlight-backdrops/sitemap.xml
         f.write(feed_xml_content)
     print(f"[ETSY-SYNC] {pinterest_feed_path} generated for 24/7 Pinterest Auto-Publishing.")
 
-    # Git push to GitHub Pages
-    subprocess.run(["git", "add", "."], cwd=SHOWCASE_DIR, check=True)
-    subprocess.run(["git", "commit", "-m", "feat: integrate studio direct order modal to gomoto253@gmail.com and extra catalog"], cwd=SHOWCASE_DIR)
-    res = subprocess.run(["git", "push", "origin", "main"], cwd=SHOWCASE_DIR, capture_output=True, text=True)
-    print("[ETSY-SYNC] Deployed to GitHub Pages:", res.stdout, res.stderr)
+    # Git push to GitHub Pages if running locally outside CI
+    if not os.environ.get("GITHUB_ACTIONS"):
+        try:
+            subprocess.run(["git", "add", "."], cwd=SHOWCASE_DIR, check=True)
+            subprocess.run(["git", "commit", "-m", "chore(sync): update catalog and pinterest feed"], cwd=SHOWCASE_DIR)
+            res = subprocess.run(["git", "push", "origin", "main"], cwd=SHOWCASE_DIR, capture_output=True, text=True)
+            print("[ETSY-SYNC] Deployed to GitHub Pages:", res.stdout, res.stderr)
+        except Exception as e:
+            print("[ETSY-SYNC] Local git push note:", e)
 
 
 if __name__ == "__main__":
